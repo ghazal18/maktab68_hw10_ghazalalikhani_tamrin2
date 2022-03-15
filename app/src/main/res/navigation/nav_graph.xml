@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/qustionFragment">
+
+    <fragment
+        android:id="@+id/qustionFragment"
+        android:name="com.example.myapplication.QustionFragment"
+        android:label="fragment_qustion"
+        tools:layout="@layout/fragment_qustion" >
+        <action
+            android:id="@+id/action_qustionFragment_to_hintFragment"
+            app:destination="@id/hintFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hintFragment"
+        android:name="com.example.myapplication.HintFragment"
+        android:label="fragment_hint"
+        tools:layout="@layout/fragment_hint" >
+        <argument
+            android:name="answer"
+            app:argType="boolean" />
+    </fragment>
+</navigation>
